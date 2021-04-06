@@ -1,0 +1,8 @@
+.serverless
+.dockerignore
+node_modules
+Dockerfile
+Makefile
+*.json
+*.yml
+*.md

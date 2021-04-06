@@ -1,0 +1,18 @@
+service: serverless-sandbox-php-container-image
+
+provider:
+    name: aws
+    region: eu-west-3
+    ecr:
+        images:
+            app:
+                path: ./
+
+functions:
+    api:
+        image:
+            name: app
+        description: ''
+        timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
+        events:
+            -   httpApi: '*'
